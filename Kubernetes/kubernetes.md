@@ -27,7 +27,7 @@ Kubernetes (often abbreviated as K8s) is an open-source container orchestration 
 #### Kubernetes Master Node other objects
 
 5. kube-admin --> it is used to configure the master node
-6. kubectl  ---> its a command line tool that interacts with the kubernetes API server.
+6. kubectl  ---> its a command line tool that interacts with the kubernetes API server and manage the kubernetes resources.
 5. kube proxy --> is a network proxy service that runs on each node in a Kubernetes cluster. Its primary role is to maintain network connectivity to Kubernetes pods and services by implementing network rules, forwarding traffic, and load balancing
 
 
