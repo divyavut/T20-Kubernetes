@@ -18,14 +18,14 @@
 3. Install kubectl command line tool.This commands includes kubectl and gke-gcloud-auth-plugin
 
        gcloud components install kubectl.
-       
+
 4. Create a Google  Kubernetes Engine
 5. Set the active project: Run the following command to set the project context: 
         
-           gcloud config set project [PROJECT_ID]
+       gcloud config set project [PROJECT_ID]
 6. Get credentials for your Kubernetes cluster: Run this command to configure kubectl to use your cluster:
 
-            gcloud container clusters get-credentials [CLUSTER_NAME] --zone [ZONE] --project [PROJECT_ID]
+       gcloud container clusters get-credentials [CLUSTER_NAME] --zone [ZONE] --project [PROJECT_ID]
 7. Verify the connection: You can check if you are connected to your cluster by running:
                 kubectl get nodes
 
