@@ -27,5 +27,6 @@
 
        gcloud container clusters get-credentials [CLUSTER_NAME] --zone [ZONE] --project [PROJECT_ID]
 7. Verify the connection: You can check if you are connected to your cluster by running:
-                kubectl get nodes
+
+            kubectl get nodes
 
