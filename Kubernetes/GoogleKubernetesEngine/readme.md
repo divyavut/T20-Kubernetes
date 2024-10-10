@@ -16,7 +16,9 @@
 1. Create a GCP account
 2. Install gcloud CLI  command line tool and configure it in environment variables.
 3. Install kubectl command line tool.This commands includes kubectl and gke-gcloud-auth-plugin
-    gcloud components install kubectl.
+
+       gcloud components install kubectl.
+       
 4. Create a Google  Kubernetes Engine
 5. Set the active project: Run the following command to set the project context: 
         
