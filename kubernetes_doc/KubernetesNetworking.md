@@ -12,3 +12,7 @@
   - Purpose: Allows communication between containers within the same Pod.
   - Managed By: Container runtime (e.g., Docker, containerd).
 
+#### Insdie Pod
+- default pause container will be created and it creates network interface card and attach it to 1. main container, 2. helper container.
+- we cant see pause conatiner in the pod, it is hidden.
+
