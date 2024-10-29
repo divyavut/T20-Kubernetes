@@ -1,0 +1,73 @@
+# apiVersion: apps/v1 
+# kind: Deployment 
+# metadata: 
+#   name: cpu-hpa-demo
+# spec: 
+#   replicas: 1
+#   selector: 
+#     matchLabels:
+#       app: nginx 
+#   template: 
+#     metadata: 
+#       labels: 
+#         app: nginx 
+#     spec: 
+#       containers:
+#       - name: nginx 
+#         image: nginx 
+#         ports: 
+#         - containerPort: 80 
+#         resources:
+#           requests: 
+#             cpu: "200m"
+#           limits: 
+#             cpu: "500m"
+# --- 
+# apiVersion: v1 
+# kind: Service
+# metadata: 
+#   name: cpu-hpa-demo 
+# spec: 
+#   selector: 
+#     app: nginx 
+#   type: ClusterIP 
+#   ports: 
+#   - port: 80
+#     targetPort: 80 
+#     protocol: TCP
+      
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cpu-hpa-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cpu-hpa-demo
+  template:
+    metadata:
+      labels:
+        app: cpu-hpa-demo
+    spec:
+      containers:
+      - name: cpu-hpa-demo
+        image: nginx
+        resources:
+          requests:
+            cpu: "200m"
+          limits:
+            cpu: "500m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cpu-hpa-demo
+spec:
+  selector:
+    app: cpu-hpa-demo
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP

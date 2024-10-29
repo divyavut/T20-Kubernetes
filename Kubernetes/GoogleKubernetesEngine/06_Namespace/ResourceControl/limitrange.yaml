@@ -1,0 +1,15 @@
+apiVersion: v1 
+kind: LimitRange 
+metadata: 
+  name: devopsteam-lr 
+  namespace: devopsteam 
+spec: 
+  limits: 
+  - type: Pod
+    min: 
+      cpu: "60m"
+      memory: "100Mi"
+    max: 
+      cpu: "120m" #Millicores
+      memory: "200Mi" #Mebibytes
+    

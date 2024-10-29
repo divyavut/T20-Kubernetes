@@ -1,7 +1,7 @@
 apiVersion: apps/v1 
 kind: Deployment 
 metadata: 
- name: nginx-deployment 
+ name: nginx-deployment-lb
 spec: 
   replicas: 5
   selector:
@@ -23,11 +23,11 @@ spec:
 apiVersion: v1 
 kind: Service 
 metadata: 
- name: nginx-service 
+ name: nginx-service-lb
 spec: 
   selector:
     app: nginx-deploy
-  type: ClusterIP
+  type: LoadBalancer
   ports: 
   - port: 80
     targetPort: 8080

@@ -22,7 +22,7 @@ Kubernetes (often abbreviated as K8s) is an open-source container orchestration 
   - EndpointSlice Controller
   - Custom Controllers
 3. Scheduler --->  Scheduler is responsible for assigning pods to available nodes in the cluster based on resource requirements, affinity rules, and other factors.
-4. ectd   ---> It is a distributed key value store that maintains the entire state of kubernetes clusetr including details about the services, pod, nodes and more.
+4. ectd   ---> It is a distributed key value store that maintains the entire state of kubernetes cluster including details about the services, pod, nodes and more.
 
 ##### Controller ( controller has a Control loop --> Observe,diff, action)
   - Deployments : how many pods are asked by user, it always ensure desired number of pods are available on the node. user: 10 pods; desired 
@@ -60,5 +60,10 @@ Kubernetes (often abbreviated as K8s) is an open-source container orchestration 
 
 
 #### Service and deployment(selector and labels)
+-  Pods has a label as app: nginx-deploy.
+- Deplyment  has a selector , selector tells the Deployment, check is there an pods with this label
+  
+#### Service and deployment(selector and labels)
 - Deployment creates Pods with the label app: nginx-deploy.
-- Service has a selector that looks for Pods with the label 
+- Service has a selector , selector tells the service, check is there an pods with this label
+  
